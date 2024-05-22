@@ -7,20 +7,27 @@
 
 import UIKit
 
-struct User {
-    
+struct User: Decodable {
+
     // MARK: - Types
     enum CodingKeys: String, CodingKey {
         case id
         case username
         case imageName
     }
-    
+
     // MARK: - Properties
     let id: String
     let username: String
     let image: UIImage
-    
+
+
+    init(id: String, username: String, image: UIImage) {
+        self.id = id
+        self.username = username
+        self.image = image
+    }
+
     // MARK: - Life Cycle
     init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -39,4 +46,10 @@ struct User {
             )
         }
     }
+
+    static let preview = User(
+        id: "1",
+        username: "Ali",
+        image: #imageLiteral(resourceName: "avatar_1.png")
+    )
 }

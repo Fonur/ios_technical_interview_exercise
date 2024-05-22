@@ -5,19 +5,23 @@
       "content":"Which dessert should I serve at my party?",
       "options":[
          {
-            "id":"option_1",
-            "image_name":"post_1_option_1"
+            "id":"opt_001",
+            "image_name":"post_1_option_1",
+            "votes": 85
          },
          {
-            "id":"option_2",
-            "image_name":"post_1_option_2"
+            "id":"opt_002",
+            "image_name":"post_1_option_2",
+            "votes": 65
          }
       ],
       "user":{
          "id":"user_1",
          "username":"Alice",
          "image_name":"avatar_1"
-      }
+      },
+      "total_votes": 150,
+      "last_voted":"2024-05-24T12:00:00Z"
    },
    {
       "id":"post_2",
@@ -25,19 +29,23 @@
       "content":"Which car should I buy for my next vehicle?",
       "options":[
          {
-            "id":"option_1",
-            "image_name":"post_2_option_1"
+            "id":"opt_003",
+            "image_name":"post_2_option_1",
+            "votes": 140
          },
          {
-            "id":"option_2",
-            "image_name":"post_2_option_2"
+            "id":"opt_004",
+            "image_name":"post_2_option_2",
+            "votes": 110
          }
       ],
       "user":{
          "id":"user_3",
          "username":"Chris",
          "image_name":"avatar_3"
-      }
+      },
+      "total_votes": 250,
+      "last_voted":"2024-05-23T15:30:00Z"
    },
    {
       "id":"post_3",
@@ -45,19 +53,23 @@
       "content":"Where should we go for our anniversary trip?",
       "options":[
          {
-            "id":"option_1",
-            "image_name":"post_3_option_1"
+            "id":"opt_005",
+            "image_name":"post_3_option_1",
+            "votes": 170
          },
          {
-            "id":"option_2",
-            "image_name":"post_3_option_2"
+            "id":"opt_006",
+            "image_name":"post_3_option_2",
+            "votes": 130
          }
       ],
       "user":{
          "id":"user_4",
          "username":"Diana",
          "image_name":"avatar_4"
-      }
+      },
+      "total_votes": 300,
+      "last_voted":"2024-05-24T11:45:00Z"
    },
    {
       "id":"post_4",
@@ -65,19 +77,23 @@
       "content":"Which breed should we choose for our new family pet?",
       "options":[
          {
-            "id":"option_1",
-            "image_name":"post_4_option_1"
+            "id":"opt_007",
+            "image_name":"post_4_option_1",
+            "votes": 55
          },
          {
-            "id":"option_2",
-            "image_name":"post_4_option_2"
+            "id":"opt_008",
+            "image_name":"post_4_option_2",
+            "votes": 65
          }
       ],
       "user":{
          "id":"user_5",
          "username":"Evan",
          "image_name":"avatar_5"
-      }
+      },
+      "total_votes": 120,
+      "last_voted":"2024-05-24T12:15:00Z"
    },
    {
       "id":"post_5",
@@ -85,19 +101,23 @@
       "content":"Which design should we choose for our new office layout?",
       "options":[
          {
-            "id":"option_1",
-            "image_name":"post_5_option_1"
+            "id":"opt_009",
+            "image_name":"post_5_option_1",
+            "votes": 80
          },
          {
-            "id":"option_2",
-            "image_name":"post_5_option_2"
+            "id":"opt_010",
+            "image_name":"post_5_option_2",
+            "votes": 95
          }
       ],
       "user":{
          "id":"user_3",
          "username":"Chris",
          "image_name":"avatar_3"
-      }
+      },
+      "total_votes": 175,
+      "last_voted":"2024-05-24T10:50:00Z"
    },
    {
       "id":"post_6",
@@ -105,19 +125,23 @@
       "content":"Which guitar should I buy as a beginner?",
       "options":[
          {
-            "id":"option_1",
-            "image_name":"post_6_option_1"
+            "id":"opt_011",
+            "image_name":"post_6_option_1",
+            "votes": 115
          },
          {
-            "id":"option_2",
-            "image_name":"post_6_option_2"
+            "id":"opt_012",
+            "image_name":"post_6_option_2",
+            "votes": 85
          }
       ],
       "user":{
          "id":"user_1",
          "username":"Alice",
          "image_name":"avatar_1"
-      }
+      },
+      "total_votes": 200,
+      "last_voted":"2024-05-24T09:25:00Z"
    },
    {
       "id":"post_7",
@@ -125,18 +149,22 @@
       "content":"What theme should we pick for the year-end company party?",
       "options":[
          {
-            "id":"option_1",
-            "image_name":"post_7_option_1"
+            "id":"opt_013",
+            "image_name":"post_7_option_1",
+            "votes": 125
          },
          {
-            "id":"option_2",
-            "image_name":"post_7_option_2"
+            "id":"opt_014",
+            "image_name":"post_7_option_2",
+            "votes": 95
          }
       ],
       "user":{
          "id":"user_2",
          "username":"Beth",
          "image_name":"avatar_2"
-      }
+      },
+      "total_votes": 220,
+      "last_voted":"2024-05-24T10:10:00Z"
    }
 ]

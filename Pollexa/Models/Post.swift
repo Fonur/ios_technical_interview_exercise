@@ -13,5 +13,20 @@ struct Post: Decodable {
     let id: String
     let createdAt: Date
     let content: String
-    let options: [Option]
+    var options: [Option]
+    let user: User
+    let lastVoted: Date
+    let totalVotes: Int
+
+    static var preview: Post {
+        Post(
+            id: "post1",
+            createdAt: Date(),
+            content: "This is a sample post content.",
+            options: Option.preview,
+            user: User.preview,
+            lastVoted: .now,
+            totalVotes: 120
+        )
+    }
 }
