@@ -49,6 +49,9 @@ class DiscoverViewController: UIViewController {
                     self?.posts = posts.sorted(by: { lhs, rhs in
                         lhs.createdAt > rhs.createdAt
                     })
+                    self?.cellViewModels = self?.posts.map({
+                        return VoteCellViewModel(post: $0, service: MockContentProvider(network: NetworkManager()))
+                    }) ?? []
                 case .fetchPostsFailed(_):
                     print("error")
                 }
@@ -119,9 +122,7 @@ extension DiscoverViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VoteCell", for: indexPath) as! VoteCollectionViewCell
-        let post = posts[indexPath.row]
-        let cellViewModel = VoteCellViewModel(post: post, service: MockContentProvider(network: NetworkManager()))
-        cell.configure(with: cellViewModel)
+        cell.configure(with: cellViewModels[indexPath.row])
         cell.delegate = self
         cell.accessibilityIdentifier = "VoteCell"
         return cell

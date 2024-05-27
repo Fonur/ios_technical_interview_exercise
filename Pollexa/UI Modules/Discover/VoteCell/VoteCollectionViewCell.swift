@@ -66,7 +66,9 @@ class VoteCollectionViewCell: UICollectionViewCell {
         viewModel.$showingPercentages
             .receive(on: RunLoop.main)
             .sink { [weak self] showingPercentages in
-                self?.showPercentages()
+                if showingPercentages == true {
+                    self?.showPercentages()
+                }
             }
             .store(in: &cancellables)
     }

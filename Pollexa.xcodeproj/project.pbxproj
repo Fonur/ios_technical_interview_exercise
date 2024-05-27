@@ -14,6 +14,7 @@
 		49432E0A2BFF788F00372F46 /* VoteCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49432E092BFF788F00372F46 /* VoteCellView.xib */; };
 		495C3A622C040B0600926B34 /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3A612C040B0600926B34 /* DiscoverViewModel.swift */; };
 		495C3A642C040B2600926B34 /* VoteCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3A632C040B2600926B34 /* VoteCellViewModel.swift */; };
+		495C3A662C040CBA00926B34 /* VoteCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3A652C040CBA00926B34 /* VoteCellTests.swift */; };
 		497056A12BFE060F00C499FF /* VoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497056A02BFE060F00C499FF /* VoteCollectionViewCell.swift */; };
 		497056A42BFE0B4800C499FF /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497056A32BFE0B4800C499FF /* TimeInterval+Extensions.swift */; };
 		49711E2E2C00A89F00F1A30E /* ThumbsUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49711E2D2C00A89F00F1A30E /* ThumbsUpView.swift */; };
@@ -26,7 +27,6 @@
 		49B1D7692C03298B0014C23D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B1D7682C03298B0014C23D /* NetworkManager.swift */; };
 		49B1D76D2C038C570014C23D /* MockContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B1D76C2C038C570014C23D /* MockContentProvider.swift */; };
 		49E645152BFE217200367266 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E645142BFE217200367266 /* UIImage+Extensions.swift */; };
-		49EDB6462BFCC14C00B249B0 /* VoteCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EDB6452BFCC14C00B249B0 /* VoteCellTests.swift */; };
 		49EDB64D2BFCCAB300B249B0 /* DiscoverViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EDB64C2BFCCAB300B249B0 /* DiscoverViewTests.swift */; };
 		6E3A36022BF2563400ECE78C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3A36012BF2563400ECE78C /* AppDelegate.swift */; };
 		6E3A36042BF2563400ECE78C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3A36032BF2563400ECE78C /* SceneDelegate.swift */; };
@@ -66,6 +66,7 @@
 		49432E092BFF788F00372F46 /* VoteCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoteCellView.xib; sourceTree = "<group>"; };
 		495C3A612C040B0600926B34 /* DiscoverViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewModel.swift; sourceTree = "<group>"; };
 		495C3A632C040B2600926B34 /* VoteCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteCellViewModel.swift; sourceTree = "<group>"; };
+		495C3A652C040CBA00926B34 /* VoteCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteCellTests.swift; sourceTree = "<group>"; };
 		497056A02BFE060F00C499FF /* VoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCollectionViewCell.swift; sourceTree = "<group>"; };
 		497056A32BFE0B4800C499FF /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
 		49711E2D2C00A89F00F1A30E /* ThumbsUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbsUpView.swift; sourceTree = "<group>"; };
@@ -81,7 +82,6 @@
 		49E645142BFE217200367266 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		49E6451B2BFE29A500367266 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		49EDB63C2BFCC11400B249B0 /* PollexaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PollexaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		49EDB6452BFCC14C00B249B0 /* VoteCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VoteCellTests.swift; path = ../../../VoteCellTests.swift; sourceTree = "<group>"; };
 		49EDB64C2BFCCAB300B249B0 /* DiscoverViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewTests.swift; sourceTree = "<group>"; };
 		6E3A35FE2BF2563400ECE78C /* Pollexa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pollexa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E3A36012BF2563400ECE78C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -224,8 +224,8 @@
 		49EDB63D2BFCC11400B249B0 /* PollexaTests */ = {
 			isa = PBXGroup;
 			children = (
+				495C3A652C040CBA00926B34 /* VoteCellTests.swift */,
 				49E6451B2BFE29A500367266 /* Info.plist */,
-				49EDB6452BFCC14C00B249B0 /* VoteCellTests.swift */,
 				49EDB64C2BFCCAB300B249B0 /* DiscoverViewTests.swift */,
 			);
 			path = PollexaTests;
@@ -487,8 +487,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49EDB6462BFCC14C00B249B0 /* VoteCellTests.swift in Sources */,
 				49EDB64D2BFCCAB300B249B0 /* DiscoverViewTests.swift in Sources */,
+				495C3A662C040CBA00926B34 /* VoteCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

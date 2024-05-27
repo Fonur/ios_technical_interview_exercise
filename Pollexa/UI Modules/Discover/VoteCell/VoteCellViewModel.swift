@@ -48,12 +48,13 @@ extension VoteCellViewModel {
             switch result {
             case .success(let posts):
                 completion(.success(posts))
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    self?.showingPercentages = true
-                }
             case .failure(let error):
                 print("error \(error.localizedDescription)")
             }
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.showingPercentages = true
         }
     }
 }
