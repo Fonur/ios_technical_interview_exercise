@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MockContentProvider: ContentProviding {
+struct MockContentProvider: ContentPostProviding, ContentGetProviding {
     var network: Networking
     private var responseData: [Post] = []
     private let postProvider: PostProvider = .shared
@@ -18,7 +18,7 @@ struct MockContentProvider: ContentProviding {
             switch result {
             case .success(let posts):
                 self.responseData = posts
-            case .failure(let error):
+            case .failure(_):
                 print("error")
             }
         }

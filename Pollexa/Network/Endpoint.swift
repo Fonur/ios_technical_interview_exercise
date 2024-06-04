@@ -21,7 +21,7 @@ extension Endpoint: RequestProviding {
         switch self {
         case .fetchPosts:
             return URLRequest(url: url)
-        case .postVote(let id):
+        case .postVote(_):
             return URLRequest(url: url)
         }
     }

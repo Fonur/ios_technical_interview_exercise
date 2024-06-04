@@ -7,17 +7,12 @@
 
 import Foundation
 
-protocol ContentProviding {
+protocol ContentPostProviding {
     var network: Networking { get }
-    func getPosts(_ completion: @escaping (Result<[Post], Error>) -> Void)
     func postVote(optionId: Int, _ completion: @escaping (Result<[Post], Error>) -> Void)
 }
 
-extension ContentProviding {
-    func getPosts(_ completion: @escaping (Result<[Post], Error>) -> Void) {
-        network.execute(Endpoint.fetchPosts, completion: completion)
-    }
-
+extension ContentPostProviding {
     func postVote(optionId: Int, _ completion: @escaping (Result<[Post], Error>) -> Void) {
         network.execute(Endpoint.postVote(id: optionId), completion: completion)
     }

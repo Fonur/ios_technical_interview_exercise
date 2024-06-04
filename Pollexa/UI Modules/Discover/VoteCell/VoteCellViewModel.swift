@@ -10,7 +10,7 @@ import Combine
 import UIKit
 
 final class VoteCellViewModel {
-    private let service: ContentProviding
+    private let service: ContentPostProviding
     @Published var showingPercentages: Bool = false
 
     let post: Post
@@ -25,7 +25,7 @@ final class VoteCellViewModel {
     let option1Percentage: Double
     let option2Percentage: Double
 
-    init(post: Post, service: ContentProviding) {
+    init(post: Post, service: ContentPostProviding) {
         let diffDate = Date().timeIntervalSince(post.createdAt)
         self.post = post
         self.avatarImage = post.user.image
@@ -44,7 +44,7 @@ final class VoteCellViewModel {
 
 extension VoteCellViewModel {
     func vote(for id: Int, _ completion: @escaping (Result<[Post], any Error>) -> Void) {
-        service.postVote(optionId: id) { [weak self] result in
+        service.postVote(optionId: id) { result in
             switch result {
             case .success(let posts):
                 completion(.success(posts))

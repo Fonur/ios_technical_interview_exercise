@@ -11,11 +11,11 @@ import UIKit
 
 class DiscoverViewModel {
     private let output: PassthroughSubject<Output, Never> = .init()
-    let service: ContentProviding
+    let service: ContentGetProviding
     var posts: [Post] = []
     private var cancellables = Set<AnyCancellable>()
 
-    init(service: ContentProviding) {
+    init(service: ContentGetProviding) {
         self.service = service
     }
 

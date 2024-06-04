@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ContentProvider: ContentProviding {
+struct ContentProvider: ContentGetProviding, ContentPostProviding {
     var network: Networking
 
     init(network: Networking) {
