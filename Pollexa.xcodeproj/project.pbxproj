@@ -13,8 +13,6 @@
 		49432E082BFF6C7700372F46 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49432E072BFF6C7700372F46 /* Color+Extensions.swift */; };
 		49432E0A2BFF788F00372F46 /* VoteCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49432E092BFF788F00372F46 /* VoteCellView.xib */; };
 		495C3A622C040B0600926B34 /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3A612C040B0600926B34 /* DiscoverViewModel.swift */; };
-		495C3A642C040B2600926B34 /* VoteCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3A632C040B2600926B34 /* VoteCellViewModel.swift */; };
-		495C3A662C040CBA00926B34 /* VoteCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3A652C040CBA00926B34 /* VoteCellTests.swift */; };
 		497056A12BFE060F00C499FF /* VoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497056A02BFE060F00C499FF /* VoteCollectionViewCell.swift */; };
 		497056A42BFE0B4800C499FF /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497056A32BFE0B4800C499FF /* TimeInterval+Extensions.swift */; };
 		49711E2E2C00A89F00F1A30E /* ThumbsUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49711E2D2C00A89F00F1A30E /* ThumbsUpView.swift */; };
@@ -66,8 +64,6 @@
 		49432E072BFF6C7700372F46 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		49432E092BFF788F00372F46 /* VoteCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoteCellView.xib; sourceTree = "<group>"; };
 		495C3A612C040B0600926B34 /* DiscoverViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewModel.swift; sourceTree = "<group>"; };
-		495C3A632C040B2600926B34 /* VoteCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteCellViewModel.swift; sourceTree = "<group>"; };
-		495C3A652C040CBA00926B34 /* VoteCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteCellTests.swift; sourceTree = "<group>"; };
 		497056A02BFE060F00C499FF /* VoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCollectionViewCell.swift; sourceTree = "<group>"; };
 		497056A32BFE0B4800C499FF /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
 		49711E2D2C00A89F00F1A30E /* ThumbsUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbsUpView.swift; sourceTree = "<group>"; };
@@ -227,7 +223,6 @@
 		49EDB63D2BFCC11400B249B0 /* PollexaTests */ = {
 			isa = PBXGroup;
 			children = (
-				495C3A652C040CBA00926B34 /* VoteCellTests.swift */,
 				49E6451B2BFE29A500367266 /* Info.plist */,
 				49EDB64C2BFCCAB300B249B0 /* DiscoverViewTests.swift */,
 			);
@@ -237,7 +232,6 @@
 		49EDB6472BFCC15400B249B0 /* VoteCell */ = {
 			isa = PBXGroup;
 			children = (
-				495C3A632C040B2600926B34 /* VoteCellViewModel.swift */,
 				497056A02BFE060F00C499FF /* VoteCollectionViewCell.swift */,
 				49432E092BFF788F00372F46 /* VoteCellView.xib */,
 			);
@@ -491,7 +485,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				49EDB64D2BFCCAB300B249B0 /* DiscoverViewTests.swift in Sources */,
-				495C3A662C040CBA00926B34 /* VoteCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,7 +500,6 @@
 				49B1D76D2C038C570014C23D /* MockContentProvider.swift in Sources */,
 				4904C9642C0275020013C518 /* Networking.swift in Sources */,
 				49E645152BFE217200367266 /* UIImage+Extensions.swift in Sources */,
-				495C3A642C040B2600926B34 /* VoteCellViewModel.swift in Sources */,
 				497056A12BFE060F00C499FF /* VoteCollectionViewCell.swift in Sources */,
 				6E3A36022BF2563400ECE78C /* AppDelegate.swift in Sources */,
 				6E3A361A2BF25DAC00ECE78C /* User.swift in Sources */,

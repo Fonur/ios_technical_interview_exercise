@@ -39,13 +39,37 @@ final class DiscoverViewTests: XCTestCase {
                 if posts.count > 0 {
                     expectation.fulfill()
                 }
-            default:
-                break
+            default: break
             }
         }
         .store(in: &cancellables)
 
         input.send(.viewDidAppear)
+        wait(for: [expectation], timeout: 5.0)
+    }
+
+    func testVoteForCell() throws {
+        let id = "opt_011"
+        let votesCount = 115
+        let expectation = XCTestExpectation(description: "Posted vote")
+
+        let output = discoverViewModel.transform(input: input.eraseToAnyPublisher())
+
+        output.sink { state in
+            switch state {
+            case .postVote(let posts):
+                if let updatedPost = posts.first(where: { $0.options.contains {
+                    $0.id == id
+                }}) {
+                    XCTAssertEqual(updatedPost.options[0].votes, votesCount + 1)
+                    expectation.fulfill()
+                }
+            default: break
+            }
+        }
+        .store(in: &cancellables)
+
+        input.send(.vote(id))
         wait(for: [expectation], timeout: 5.0)
     }
 }

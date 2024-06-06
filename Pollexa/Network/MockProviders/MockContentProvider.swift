@@ -30,11 +30,11 @@ struct MockContentProvider: ContentPostProviding, ContentGetProviding {
         }
     }
 
-    func postVote(optionId: Int, _ completion: @escaping (Result<[Post], any Error>) -> Void) {
+    func postVote(optionId: String, _ completion: @escaping (Result<[Post], any Error>) -> Void) {
         let updatedData = responseData.map { post in
             var updatedPost = post
             updatedPost.options = post.options.map { option in
-                if option.id == String(optionId) {
+                if option.id == optionId {
                     var updatedOption = option
                     updatedOption.votes += 1
                     return updatedOption

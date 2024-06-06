@@ -7,7 +7,14 @@
 
 import UIKit
 
-struct Post: Decodable {
+struct Post: Decodable, Hashable {
+    static func == (lhs: Post, rhs: Post) -> Bool {
+        lhs.id == rhs.id
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
     
     // MARK: - Properties
     let id: String
@@ -17,6 +24,7 @@ struct Post: Decodable {
     let user: User
     let lastVoted: Date
     let totalVotes: Int
+
 
     static var preview: Post {
         Post(

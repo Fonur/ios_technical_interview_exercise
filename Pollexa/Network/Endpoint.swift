@@ -9,7 +9,7 @@ import Foundation
 
 enum Endpoint {
     case fetchPosts
-    case postVote(id: Int)
+    case postVote(id: String)
 }
 
 extension Endpoint: RequestProviding {
