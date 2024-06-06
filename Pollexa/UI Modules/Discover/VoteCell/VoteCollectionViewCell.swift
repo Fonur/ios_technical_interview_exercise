@@ -59,8 +59,17 @@ class VoteCollectionViewCell: UICollectionViewCell {
         descriptionLabel.text = post.content
         lastVoteDateLabel.text = "LAST VOTED \(Date().timeIntervalSince(post.lastVoted).timeAgoDisplay().uppercased())"
         nameLabel.text = post.user.username
-        option1Image.image = post.options[0].image.scaleImage(width: self.option1Image.bounds.width, height: self.option1Image.bounds.height)
-        option2Image.image = post.options[1].image.scaleImage(width: self.option2Image.bounds.width, height: self.option2Image.bounds.height)
+        post.options[0].image.scaleImage(width: self.option1Image.bounds.width, height: self.option1Image.bounds.height).prepareForDisplay { [weak self] preparedImage in
+            DispatchQueue.main.async {
+                self?.option1Image.image = preparedImage
+            }
+        }
+
+        post.options[1].image.scaleImage(width: self.option2Image.bounds.width, height: self.option2Image.bounds.height).prepareForDisplay { [weak self] preparedImage in
+            DispatchQueue.main.async {
+                self?.option2Image.image = preparedImage
+            }
+        }
         totalVotesCountLabel.text = String(post.totalVotes)
         optionOnePercentage.text = String(format: "%.0f%%", calculatePercentage(post.options[0].votes))
         optionTwoPercentage.text = String(format: "%.0f%%", calculatePercentage(post.options[1].votes))
